@@ -23,11 +23,13 @@
 <link rel="preload" href="fonts/poppins-178956.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/poppins-5a6413.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/poppins-fd1924.woff2" as="font" type="font/woff2" crossorigin>
-<style>html.fl body{opacity:0}body{transition:opacity .25s ease}</style>
-<link rel="stylesheet" href="fonts.css?v=1">
-<link rel="stylesheet" href="site.css?v=1">
-<script>(function(){var d=document,h=d.documentElement;h.classList.add("fl","js");var done=function(){h.classList.remove("fl")};setTimeout(done,1200);if(d.fonts&&d.fonts.load){Promise.all(["1em \"League Gothic\"", "400 1em Poppins", "500 1em Poppins", "600 1em Poppins", "600 1em Caveat"].map(function(f){return d.fonts.load(f)})).then(done,done)}else{done()}})();</script>
-<script src="app.js?v=1" defer></script>
+<link rel="preload" as="image" href="img/menu-head.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/logo-cream.png" type="image/png" fetchpriority="high">
+<style>html{background:#98272D}html.fl body{opacity:0}body{transition:opacity .4s ease}</style>
+<link rel="stylesheet" href="fonts.css?v=2">
+<link rel="stylesheet" href="site.css?v=2">
+<script>(function(){var d=document,h=d.documentElement,w=window,fin=false;h.classList.add("fl","js");var done=function(){if(fin)return;fin=true;w.__ready=Math.round(performance.now());h.classList.remove("fl")};setTimeout(done,3000);var go=function(){var ps=["1em \"League Gothic\"", "400 1em Poppins", "500 1em Poppins", "600 1em Poppins", "600 1em Caveat"].map(function(f){return d.fonts.load(f)});ps.push(d.fonts.ready);[".hero-photo img", ".hero-logo", ".menu-head-photo img", ".hdr-logo img"].forEach(function(s){var i=d.querySelector(s);if(i&&i.decode){ps.push(i.decode().catch(function(){}))}});Promise.all(ps).then(done,done)};if(d.fonts&&d.fonts.load){if(d.readyState==="loading"){d.addEventListener("DOMContentLoaded",go)}else{go()}}else{done()}})();</script>
+<script src="app.js?v=2" defer></script>
 </head>
 <body class="sub">
 <a class="skip" href="#main">Skip to content</a>
@@ -66,7 +68,7 @@
     <h1>The Menu</h1>
     <p>Prices in EGP, subject to 12% service charge and 14% VAT.</p>
   </div>
-  <figure class="menu-head-photo"><img src="img/menu-head.webp" alt="A red-rimmed plate with the line-drawn gyoza mark and a red Chubby Lee chopstick sleeve, beside a beef donburi" width="1100" height="705" fetchpriority="high"></figure>
+  <figure class="menu-head-photo"><img src="img/menu-head.webp" alt="A red-rimmed plate with the line-drawn gyoza mark and a red Chubby Lee chopstick sleeve, beside a beef donburi" width="1100" height="705" loading="eager" decoding="async" fetchpriority="high"></figure>
 </section>
 <nav class="chips" id="chips" aria-label="Menu categories"><div class="chips-in">
 <a class="chip" href="#specials">Specials</a>

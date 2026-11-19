@@ -53,22 +53,20 @@
     dlg.addEventListener('click', function (ev) { if (ev.target === dlg && dlg.close) dlg.close(); });
   }
 
-  /* ---------- the shelf wall switches on once ---------- */
+  /* ---------- the shelf wall lights up all at once ---------- */
   var shelf = $('#shelf');
   if (shelf) {
     var cubbies = $$('.cubby', shelf);
     var lit = false;
     var lightUp = function () {
       if (lit) return; lit = true;
-      cubbies.forEach(function (c, i) {
-        if (reduce) { c.classList.add('on'); } else { setTimeout(function () { c.classList.add('on'); }, i * 60); }
-      });
+      cubbies.forEach(function (c) { c.classList.add('on'); });
     };
     if (reduce || !('IntersectionObserver' in w)) { lightUp(); }
     else {
       var io = new IntersectionObserver(function (es) {
         if (es[0].isIntersecting) { io.disconnect(); lightUp(); }
-      }, { threshold: 0.35 });
+      }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
       io.observe(shelf);
     }
   }

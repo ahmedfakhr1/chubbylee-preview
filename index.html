@@ -24,12 +24,13 @@
 <link rel="preload" href="fonts/poppins-5a6413.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/poppins-fd1924.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="img/hero.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/logo-cream.png" type="image/png" fetchpriority="high">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Chubby Lee", "description": "Asian restaurant in Lake Town, New Cairo, built around a lit wall of red figurines. Ramen, donburis, gyoza, sandos and desserts.", "url": "https://ahmedfakhr1.github.io/chubbylee-preview/", "image": "https://ahmedfakhr1.github.io/chubbylee-preview/img/og.jpg", "logo": "https://ahmedfakhr1.github.io/chubbylee-preview/img/logo-red.png", "servesCuisine": "Asian", "hasMenu": "https://ahmedfakhr1.github.io/chubbylee-preview/menu.html", "acceptsReservations": "https://linktr.ee/ChubbyLeeEg", "address": {"@type": "PostalAddress", "streetAddress": "Lake Town", "addressLocality": "New Cairo", "addressCountry": "EG"}, "geo": {"@type": "GeoCoordinates", "latitude": 30.02664, "longitude": 31.53906}, "hasMap": "https://maps.app.goo.gl/s7n27jjWuFKzt7Va6", "sameAs": ["https://www.instagram.com/chubbylee.eg/", "https://www.tiktok.com/@chubbylee.eg", "https://linktr.ee/ChubbyLeeEg"]}</script>
-<style>html.fl body{opacity:0}body{transition:opacity .25s ease}</style>
-<link rel="stylesheet" href="fonts.css?v=1">
-<link rel="stylesheet" href="site.css?v=1">
-<script>(function(){var d=document,h=d.documentElement;h.classList.add("fl","js");var done=function(){h.classList.remove("fl")};setTimeout(done,1200);if(d.fonts&&d.fonts.load){Promise.all(["1em \"League Gothic\"", "400 1em Poppins", "500 1em Poppins", "600 1em Poppins", "600 1em Caveat"].map(function(f){return d.fonts.load(f)})).then(done,done)}else{done()}})();</script>
-<script src="app.js?v=1" defer></script>
+<style>html{background:#98272D}html.fl body{opacity:0}body{transition:opacity .4s ease}</style>
+<link rel="stylesheet" href="fonts.css?v=2">
+<link rel="stylesheet" href="site.css?v=2">
+<script>(function(){var d=document,h=d.documentElement,w=window,fin=false;h.classList.add("fl","js");var done=function(){if(fin)return;fin=true;w.__ready=Math.round(performance.now());h.classList.remove("fl")};setTimeout(done,3000);var go=function(){var ps=["1em \"League Gothic\"", "400 1em Poppins", "500 1em Poppins", "600 1em Poppins", "600 1em Caveat"].map(function(f){return d.fonts.load(f)});ps.push(d.fonts.ready);[".hero-photo img", ".hero-logo", ".menu-head-photo img", ".hdr-logo img"].forEach(function(s){var i=d.querySelector(s);if(i&&i.decode){ps.push(i.decode().catch(function(){}))}});Promise.all(ps).then(done,done)};if(d.fonts&&d.fonts.load){if(d.readyState==="loading"){d.addEventListener("DOMContentLoaded",go)}else{go()}}else{done()}})();</script>
+<script src="app.js?v=2" defer></script>
 </head>
 <body class="home" id="top">
 <a class="skip" href="#main">Skip to content</a>
@@ -70,7 +71,7 @@
     <p class="hero-line">Something crispy, something slurpy, and something to sip on.</p>
     <a class="btn btn-cream" href="#book">Book a table</a>
   </div>
-  <div class="hero-photo"><img src="img/hero.webp" alt="Beef Ramen in a red Chubby Lee bowl on a stack of plates, between two red figurines" width="1152" height="1440" fetchpriority="high"></div>
+  <div class="hero-photo"><img src="img/hero.webp" alt="Beef Ramen in a red Chubby Lee bowl on a stack of plates, between two red figurines" width="1152" height="1440" loading="eager" decoding="async" fetchpriority="high"></div>
 </section>
 
 <section class="wall" id="wall" aria-labelledby="wall-h">
