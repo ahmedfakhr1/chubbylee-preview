@@ -26,12 +26,13 @@
 <link rel="preload" as="image" href="img/menu-head.webp" type="image/webp" fetchpriority="high">
 <link rel="preload" as="image" href="img/logo-cream.png" type="image/png" fetchpriority="high">
 <style>html{background:#98272D}html.fl body{opacity:0}body{transition:opacity .4s ease}</style>
-<link rel="stylesheet" href="fonts.css?v=2">
-<link rel="stylesheet" href="site.css?v=2">
-<script>(function(){var d=document,h=d.documentElement,w=window,fin=false;h.classList.add("fl","js");var done=function(){if(fin)return;fin=true;w.__ready=Math.round(performance.now());h.classList.remove("fl")};setTimeout(done,3000);var go=function(){var ps=["1em \"League Gothic\"", "400 1em Poppins", "500 1em Poppins", "600 1em Poppins", "600 1em Caveat"].map(function(f){return d.fonts.load(f)});ps.push(d.fonts.ready);[".hero-photo img", ".hero-logo", ".menu-head-photo img", ".hdr-logo img"].forEach(function(s){var i=d.querySelector(s);if(i&&i.decode){ps.push(i.decode().catch(function(){}))}});Promise.all(ps).then(done,done)};if(d.fonts&&d.fonts.load){if(d.readyState==="loading"){d.addEventListener("DOMContentLoaded",go)}else{go()}}else{done()}})();</script>
-<script src="app.js?v=2" defer></script>
+<link rel="stylesheet" href="fonts.css?v=3">
+<link rel="stylesheet" href="site.css?v=3">
+<script>(function(){var d=document,h=d.documentElement,w=window,t0=performance.now(),first=false,lifted=false;try{first=!localStorage.getItem("chubbylee-intro")}catch(e){}h.classList.add("js");var rm=w.matchMedia&&w.matchMedia("(prefers-reduced-motion: reduce)").matches;if(first){h.classList.add("veiled");try{localStorage.setItem("chubbylee-intro","1")}catch(e){}}else{h.classList.add("fl")}var lift=function(){if(lifted)return;lifted=true;w.__ready=Math.round(performance.now());if(!first){h.classList.remove("fl");return}var v=d.getElementById("veil");if(!v||rm){h.classList.remove("veiled");return}v.classList.add("out");setTimeout(function(){h.classList.remove("veiled")},800)};var settle=function(){if(!first){lift();return}var wait=rm?0:Math.max(260,1200-(performance.now()-t0));setTimeout(lift,wait)};setTimeout(lift,first?2500:3000);if(first){d.addEventListener("keydown",lift);d.addEventListener("click",lift)}var go=function(){var ps=["1em \"League Gothic\"", "400 1em Poppins", "500 1em Poppins", "600 1em Poppins", "600 1em Caveat"].map(function(f){return d.fonts.load(f)});ps.push(d.fonts.ready);[".hero-photo img", ".hero-logo", ".menu-head-photo img", ".hdr-logo img"].forEach(function(s){var i=d.querySelector(s);if(i&&i.decode){ps.push(i.decode().catch(function(){}))}});var n=0,t=ps.length,f=d.getElementById("veil-fill");ps.forEach(function(p){p.then(function(){n++;if(f)f.style.transform="scaleX("+(n/t)+")"},function(){n++;if(f)f.style.transform="scaleX("+(n/t)+")"})});Promise.all(ps).then(settle,settle)};if(d.fonts&&d.fonts.load){if(d.readyState==="loading"){d.addEventListener("DOMContentLoaded",go)}else{go()}}else{lift()}})();</script>
+<script src="app.js?v=3" defer></script>
 </head>
 <body class="sub">
+<div class="veil" id="veil" aria-hidden="true"><img class="veil-logo" src="img/logo-cream.png" alt="" width="1100" height="321"><span class="veil-track"><span class="veil-fill" id="veil-fill"></span></span></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="hdr" id="hdr">
   <div class="hdr-in">
